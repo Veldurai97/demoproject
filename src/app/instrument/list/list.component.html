@@ -1,0 +1,25 @@
+<button type="button" class="btn btn-success" [routerLink]="['/create']">Create</button>
+<div class="topnav">
+    <label class="SINO">SINO</label>
+    <label class="Name">NAME</label>
+    <label class="Email">EMAIL</label>
+    <label class="AddressLine1">ADDRESSLINE1</label>
+    <label class="city">CITY</label>
+    <label class="state">STATE</label>
+    <label class="country">COUNTRY</label>
+    <label class="edit">EDIT</label>
+    <label class="view">VIEW</label>
+    <label class="delete">DELETE</label>
+</div>
+<div *ngFor='let obj of address; index as i' >
+    <label id="demo">{{i}}</label>
+    <label id="name">{{obj.firstName}}{{obj.lastName}}</label>
+    <label id="email">{{obj.email}}</label>
+    <label id="address">{{obj.address.addressLine1}}</label>
+    <label id="city">{{obj.address.city}}</label>
+    <label id="state">{{obj.address.state}}</label>
+    <label id="Country">{{obj.address.country}}</label>
+    <a id="Edit">Edit</a>
+    <a id="View">View</a>
+    <a id="Delete">Delete</a>
+</div>

@@ -1,0 +1,38 @@
+label{
+    margin-left: 55px;
+    margin-top: 20px;
+}
+input{
+    margin-left: 247px;
+}
+#firstname{
+    margin-top: 48px;
+}
+#addressline1{
+    margin-top: 46px;
+}
+#appcompany{
+    margin-left: 182px;
+}
+#email{
+    margin-left: 276px;
+}
+#mobile{
+    margin-left: 266px;
+}
+#state{
+    margin-left: 304px;
+}
+#city{
+    margin-left: 310px;
+}
+#country{
+    margin-left: 281px;
+}
+button{
+    margin-left: 554px;
+}
+
+.btn-info{
+    margin-top: 31px;
+}

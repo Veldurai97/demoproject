@@ -1,0 +1,77 @@
+.Name{
+    margin-left: 40px;
+}
+.Email{
+    margin-left: 80px;
+}
+.AddressLine1{
+    margin-left: 146px;
+}
+.city{
+    margin-left: 80px;
+}
+.state{
+    margin-left: 80px;
+}
+.country{
+    margin-left: 80px;
+}
+.edit{
+    margin-left: 80px;
+}
+.view{
+    margin-left: 80px;
+}
+.delete{
+    margin-left: 80px;
+}
+.btn{
+    margin-left: 1362px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+label{
+    text-align: center;
+    font-size: 17px;  
+}
+.topnav {
+    overflow: hidden;
+    background-color: #07283B;
+    color: white;
+    font-size: 17px;
+    /* margin-left: 451px; */
+    margin-right: 164px;
+    padding-top: 10px;
+  }
+
+  #demo{
+      margin-left: 10px;
+      margin-top: 10px;
+  }
+  #name{
+      margin-left: 55px;
+  }
+  #email{
+      margin-left: 20px;
+  }
+  #address{
+    margin-left: 73px;
+  }
+  #city{
+      margin-left: 168px;
+  }
+  #state{
+    margin-left: 95px;
+}
+#Country{
+    margin-left: 95px;
+}
+#Edit{
+    margin-left: 98px;
+}
+#View{
+    margin-left: 87px;
+}
+#Delete{
+    margin-left: 106px;
+}
