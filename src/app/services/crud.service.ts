@@ -17,3 +17,8 @@ export class CrudService {
     return this._httpClinet.get("http://localhost:3000/crudOperation/get_all_data_from_database_table")
   }
 }
+
+
+
+
+
