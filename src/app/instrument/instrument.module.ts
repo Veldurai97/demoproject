@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { ListComponent } from './list/list.component';
 import { CreateComponent } from './create/create.component';
 import { createComponent } from '@angular/compiler/src/core';
+import { ViewComponent } from './view/view.component';
 
 
 const routes: Routes=[
@@ -25,6 +26,10 @@ const routes: Routes=[
       {
         path:"create",
         component:CreateComponent,
+      },
+      {
+        path:"view/:id",
+        component:ViewComponent,
       }
     ]
   }
@@ -32,7 +37,7 @@ const routes: Routes=[
 
 
 @NgModule({
-  declarations: [InstrumentComponent, ListComponent, CreateComponent],
+  declarations: [InstrumentComponent, ListComponent, CreateComponent, ViewComponent],
   imports: [
     CommonModule,
     FormsModule,

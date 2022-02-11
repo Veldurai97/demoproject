@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscriber } from 'rxjs';
 import { CrudService } from 'src/app/services/crud.service';
 
 @Component({
@@ -27,5 +28,13 @@ export class ListComponent implements OnInit {
         console.log(error)
       }
       );
+  }
+
+  ondelete(ded){
+    console.log(ded)
+    this._curd.deletelist(ded).subscribe((delet)=>{
+      console.log(delet)
+      this.onGet()
+    })
   }
 }

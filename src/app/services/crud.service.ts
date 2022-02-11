@@ -16,6 +16,10 @@ export class CrudService {
   listins():Observable<any>{
     return this._httpClinet.get("http://localhost:3000/crudOperation/get_all_data_from_database_table")
   }
+
+  deletelist(detealis:any):Observable<any>{
+    return this._httpClinet.delete("http://localhost:3000/crudOperation/delete_Data_in_Database_table/"+detealis)
+  }
 }
 
 

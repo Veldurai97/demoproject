@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, NgForm } from '@angular/forms';
-import { realpath } from 'fs';
+import { Router } from '@angular/router';
 import { CrudService } from 'src/app/services/crud.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { CrudService } from 'src/app/services/crud.service';
 export class CreateComponent implements OnInit {
 
   
-  constructor(private _create:CrudService) { }
+  constructor(private _create:CrudService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -32,8 +32,8 @@ data={
  
   onSubmit(myForm: NgForm){
     console.log(myForm)
-    this._create.createins(this.data).subscribe(rept=>{
-      rept.data._id
+    this._create.createins(this.data).subscribe(repat=>{
+      this.router.navigate(['/view',repat.data._id]);
     })
   }
 }
