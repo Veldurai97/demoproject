@@ -28,6 +28,10 @@ const routes: Routes=[
         component:CreateComponent,
       },
       {
+        path:"edit/:id",
+        component:CreateComponent,
+      },
+      {
         path:"view/:id",
         component:ViewComponent,
       }

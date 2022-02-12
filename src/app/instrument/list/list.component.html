@@ -19,7 +19,7 @@
     <label id="city">{{obj.address.city}}</label>
     <label id="state">{{obj.address.state}}</label>
     <label id="Country">{{obj.address.country}}</label>
-    <a id="Edit">Edit</a>
-    <a id="View">View</a>
+    <a id="Edit"  [routerLink]="['/edit',obj._id]">Edit</a>
+    <a id="View"  [routerLink]="['/view',obj._id]">View</a>
     <a id="Delete" (click)="ondelete(obj._id)">Delete</a>
 </div>

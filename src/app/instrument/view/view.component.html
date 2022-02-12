@@ -1,1 +1,22 @@
-<p>view works!</p>
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div *ngIf="dummyvariables">
+                <p id="name">Name:{{dummyvariables.firstName}}{{dummyvariables.lastName}}</p>
+                <p id="email">Email:{{dummyvariables.email}}</p>
+                <p id="mobile">mobile:{{dummyvariables.mobile}}</p>
+                <p id="applicant">Applicantcompany:{{dummyvariables.Applicantcompanyname}}</p>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div *ngIf="dummyvariables">
+                <p id="addresline1">AddressLine:{{dummyvariables.address.addressLine1}}</p>
+                <p id="addressline2">AddressLine:{{dummyvariables.address.addressLine2}}</p>
+                <p id="sate">Sate:{{dummyvariables.address.state}}</p>
+                <p id="city">City:{{dummyvariables.address.city}}</p>
+                <p id="city">Country:{{dummyvariables.address.country}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+

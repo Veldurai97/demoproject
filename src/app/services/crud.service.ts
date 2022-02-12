@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
-import { Observable } from 'rxjs';
+import { observable, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +19,10 @@ export class CrudService {
 
   deletelist(detealis:any):Observable<any>{
     return this._httpClinet.delete("http://localhost:3000/crudOperation/delete_Data_in_Database_table/"+detealis)
+  }
+
+  viewcrud(detealis:any):Observable<any>{
+    return this._httpClinet.get("http://localhost:3000/crudOperation/get_particular_data_from_database_table/" +detealis)
   }
 }
 
