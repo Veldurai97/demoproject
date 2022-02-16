@@ -32,7 +32,6 @@ export class ViewComponent implements OnInit {
         this.valuesinviewpage=params.get('id')
         console.log(params)
       this.onview()
-      }
-    )
+      })
   }
 }

@@ -11,7 +11,9 @@ import { CrudService } from 'src/app/services/crud.service';
 export class CreateComponent implements OnInit {
 
   
-  constructor(private _create:CrudService, private router: Router, private route:ActivatedRoute) {}
+  constructor(private _create:CrudService, private router: Router, private route:ActivatedRoute) {
+    this.onshowinviewpage()
+  }
 
   ngOnInit() {
   }
@@ -29,28 +31,40 @@ data={
     country:"",
   }
 }
-vewpage
+valuesinviewpage
  
   onSubmit(myForm: NgForm){
     console.log(myForm)
-    this._create.createins(this.data).subscribe(repat=>{
-      this.router.navigate(['/view',repat.data._id]);
-    })
+    // this._create.createins(this.data).subscribe(repat=>{
+    //   this.router.navigate(['/view',repat.data._id]);
+    // })
+    if(this.onshowinviewpage==null){
+      this._create.createins(this.data).subscribe(repat=>{
+        this.router.navigate(['/view',repat.data._id])
+        })
+      }
+        else{
+          this._create.update(this.valuesinviewpage,this.data).subscribe(repat=>{
+            console.log(repat)
+            this.router.navigate(['/view',this.valuesinviewpage])
+          }
+          )
+        }
   }
-  onviewincreatpage(){
-    this._create.viewcrud(this.onviewincreatpage).subscribe(
-      showinview=>{
-       this.vewpage=showinview.data
+  onview(){
+    this._create.viewcrud(this.valuesinviewpage).subscribe(
+      view=>{
+        this.data=view.data
       })
   }
-  
-  onview(){
+  onshowinviewpage(){
     this.route.paramMap.subscribe(
       params=>{
-        this.vewpage=params.get('id')
-        this.onviewincreatpage()
-      }
-    )
+        this.valuesinviewpage=params.get('id')
+       if(this.valuesinviewpage!==null){
+        this.onview()
+       }
+      })
   }
 }
 

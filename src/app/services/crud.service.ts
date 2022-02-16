@@ -24,6 +24,9 @@ export class CrudService {
   viewcrud(detealis:any):Observable<any>{
     return this._httpClinet.get("http://localhost:3000/crudOperation/get_particular_data_from_database_table/" +detealis)
   }
+  update(id,details:any):Observable<any>{
+    return this._httpClinet.put("http://localhost:3000/crudOperation/update_Data_in_Database_table/"+id,details)
+  }
 }
 
 
