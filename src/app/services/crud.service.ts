@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient, HttpHeaders} from '@angular/common/http'
 import { observable, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CrudService {
-
+   Headers=new HttpHeaders({
+    "X-CSCAPI-KEY":"c2NKdXQwRTVhTlltMU5DREJJRlhFVjVETGFEMDZySVAyYlp6d0g5bg=="
+  })
   constructor(private _httpClinet: HttpClient) { }
 
   createins(details:any):Observable<any>{
@@ -27,9 +29,27 @@ export class CrudService {
   update(id,details:any):Observable<any>{
     return this._httpClinet.put("http://localhost:3000/crudOperation/update_Data_in_Database_table/"+id,details)
   }
+  allcountry():Observable<any>{
+    // let Headers=new HttpHeaders({
+    //   "X-CSCAPI-KEY":"c2NKdXQwRTVhTlltMU5DREJJRlhFVjVETGFEMDZySVAyYlp6d0g5bg=="
+    // })
+      return this._httpClinet.get("https://api.countrystatecity.in/v1/countries", {headers:this.Headers})
+  }
+  allstate(ciso:any):Observable<any>{
+      return this._httpClinet.get(`https://api.countrystatecity.in/v1/countries/${ciso}/states`, {headers:this.Headers})
+  }
+  allcity(siso,ciso:any):Observable<any>{
+    // let Headers=new HttpHeaders({
+    //   "X-CSCAPI-KEY":"c2NKdXQwRTVhTlltMU5DREJJRlhFVjVETGFEMDZySVAyYlp6d0g5bg=="
+    // })
+      return this._httpClinet.get(` https://api.countrystatecity.in/v1/countries/${ciso}/states/${siso}/cities`, {headers:this.Headers})
+  }
 }
 
 
 
 
 
+
+       
+      

@@ -13,6 +13,7 @@ export class CreateComponent implements OnInit {
   
   constructor(private _create:CrudService, private router: Router, private route:ActivatedRoute) {
     this.onshowinviewpage()
+    this.mycountry()
   }
 
   ngOnInit() {
@@ -32,13 +33,13 @@ data={
   }
 }
 valuesinviewpage
- 
+statevariable:any;
   onSubmit(myForm: NgForm){
     console.log(myForm)
     // this._create.createins(this.data).subscribe(repat=>{
     //   this.router.navigate(['/view',repat.data._id]);
     // })
-    if(this.onshowinviewpage==null){
+    if(this.valuesinviewpage==null){
       this._create.createins(this.data).subscribe(repat=>{
         this.router.navigate(['/view',repat.data._id])
         })
@@ -66,6 +67,32 @@ valuesinviewpage
        }
       })
   }
+   countrylist = []
+  mycountry(){
+    this._create.allcountry().subscribe(
+      countryresp=>{
+        console.log(countryresp)
+        this.countrylist=countryresp
+      }
+    )
 }
-
- 
+ statelist=[];
+  mystate(cnty){
+    this.statevariable=cnty.target.value
+    this._create.allstate(cnty.target.value).subscribe(
+      staterep=>{
+        console.log(staterep)
+      this.statelist=staterep
+      }
+    )
+  }
+  citylist=[]
+  mycity(city){
+    this._create.allcity(city.target.value,this.statevariable).subscribe(
+      cityrep=>{
+        console.log(cityrep)
+        this.citylist=cityrep
+      }
+    )
+  }
+}

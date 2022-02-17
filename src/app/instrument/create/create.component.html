@@ -34,19 +34,25 @@
                     <input type="text" id="addressline2" name="addressline2" [(ngModel)]="data.address.addressLine2" class="from-control">
                 </div>
                 <div class="form-group">
-                    <label for="state">State:</label>
-                    <input type="text" id="state" name="state" [(ngModel)]="data.address.state" class="from-control">
-                </div>
-                <div class="form-group">
-                    <label for="city">City:</label>
-                    <input type="text" id="city" name="city" [(ngModel)]="data.address.city" class="from-control">
-                </div>
-                <div class="form-group">
                     <label for="country">Country:</label>
-                    <input type="text" id="country" name="country" [(ngModel)]="data.address.country" class="from-control">
+                    <select type="text"  id="country" name="country" [(ngModel)]="data.address.country" class="from-control" (change)="mystate($event)">
+                        <option *ngFor = "let cnty of countrylist" [value]="cnty.iso2">{{cnty.name}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="country">State:</label>
+                    <select type="text"  id="country" name="country" [(ngModel)]="data.address.state" class="from-control" (change)="mycity($event)">
+                        <option *ngFor = "let sta of statelist" [value]="sta.iso2">{{sta.name}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="country">City:</label>
+                    <select type="text"  id="country" name="country" [(ngModel)]="data.address.city" class="from-control">
+                        <option *ngFor = "let cty of citylist" [value]="cty.iso2">{{cty.name}}</option>
+                    </select>
                 </div>
                 
-                <button type="submit" class="btn btn-info" >Submit</button>
+                <button type="submit" class="btn btn-info">Submit</button>
               
             </div>
         </div>
