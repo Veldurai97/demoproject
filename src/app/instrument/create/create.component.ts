@@ -92,7 +92,6 @@ statevariable:any;
       cityrep=>{
         console.log(cityrep)
         this.citylist=cityrep
-      }
-    )
+      })
   }
 }
