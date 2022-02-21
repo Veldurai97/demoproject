@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  {path:'',loadChildren:()=>import('./instrument/instrument.module').then(ins=>ins.InstrumentModule)},
+  {path:'',loadChildren:()=>import('./login/login.module').then(logn=>logn.LoginModule)},
+  {path:'instrument',loadChildren:()=>import('./instrument/instrument.module').then(ins=>ins.InstrumentModule)}
 ];
 
 @NgModule({
