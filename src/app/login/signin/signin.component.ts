@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-signin',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
-  constructor() { }
+  loginForm: FormGroup
+
+  constructor(private routes:Router) { 
+
+
+    this.loginForm=new FormGroup({
+      'Email': new FormControl(null),
+      'Password': new FormControl(null)
+    })
+  }
 
   ngOnInit() {
+  }
+
+  gotosingup(){
+    this.routes.navigate(['/signup'], {skipLocationChange:true});
   }
 
 }

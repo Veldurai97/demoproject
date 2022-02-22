@@ -4,6 +4,10 @@ import { LoginComponent } from './login.component';
 import { SingupComponent } from './singup/singup.component';
 import { SigninComponent } from './signin/signin.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon'
 
 
 const routes: Routes=[
@@ -21,7 +25,7 @@ const routes: Routes=[
         component:SigninComponent,
       },
       {
-        path:"singup",
+        path:"signup",
         component:SingupComponent,
       }
     ]
@@ -32,7 +36,9 @@ const routes: Routes=[
   declarations: [LoginComponent, SingupComponent, SigninComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ReactiveFormsModule,
+    MatButtonModule,MatInputModule,MatIconModule
   ]
 })
 export class LoginModule { }

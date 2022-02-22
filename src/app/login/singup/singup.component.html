@@ -1,1 +1,29 @@
-<p>singup works!</p>
+<div class="row">
+    <div class="col-lg-6">
+        hi
+    </div>
+    <div class="col-lg-6">
+        <form [formGroup]="loginForm">
+            <mat-form-field class="form-group">
+                <mat-label>FirstName</mat-label>
+                <input formControlName="firstName" matInput placeholder="please enter FirstName">
+            </mat-form-field><br>
+            <mat-form-field class="form-group">
+                <mat-label>LastName</mat-label>
+                <input formControlName="LastName" matInput placeholder="please enter lastname">
+            </mat-form-field><br>
+            <mat-form-field class="form-group">
+                <mat-label>Username</mat-label>
+                <input formControlName="Username" matInput placeholder="Please enter Username">
+            </mat-form-field><br>
+            <mat-form-field class="form-group">
+                <mat-label>Email</mat-label>
+                <input formControlName="email" matInput placeholder="Please enter email">
+            </mat-form-field><br>
+            <mat-form-field class="form-group">
+                <mat-label>Password</mat-label>
+                <input formControlName="Password" matInput placeholder="Please enter Password">
+            </mat-form-field>
+            </form>
+    </div>
+</div>
