@@ -1,22 +1,3 @@
-.header{
-    background-image: url("../../../assets/bookimage.jfif");
-    height: 600px;
-    margin-right: 150px;
-    margin-left: 481px;
-    margin-top: 75px;
-    opacity: 1.6;
-    align-items: center;
-}
-.image{
-    background-color: white;
-    margin-right: 325px;
-    margin-left: 337px;
-    margin-top: 50px;
-}
-.img{
-    background-image: url("../../../assets/fingerprint.jpg");
-    height: 200px;
-}
 h2{
     color: white;
     text-align: center;
@@ -29,8 +10,4 @@ h2{
 button{
     margin-left: 192px;
     margin-bottom: 30px;
-}
-#demo{
-    margin-top: 187px;
-    margin-left: 122px;
 }

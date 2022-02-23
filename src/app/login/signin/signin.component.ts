@@ -23,9 +23,4 @@ export class SigninComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  gotosingup(){
-    this.routes.navigate(['/signup'], {skipLocationChange:true});
-  }
-
 }
