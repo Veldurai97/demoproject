@@ -1,11 +1,12 @@
 .header{
     background-image: url("../../assets/bookimage.jfif");
-    height: 600px;
+    height: 700px;
     margin-right: 150px;
     margin-left: 481px;
-    margin-top: 75px;
+    margin-top: 60px;
     opacity: 1.6;
     align-items: center;
+    display: flex;
 }
 .img{
     background-image: url("../../assets/fingerprint.jpg");

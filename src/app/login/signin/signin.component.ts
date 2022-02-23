@@ -1,6 +1,7 @@
+import { validateHorizontalPosition } from '@angular/cdk/overlay';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 
 
 @Component({
@@ -11,13 +12,13 @@ import { Router } from '@angular/router';
 export class SigninComponent implements OnInit {
 
   loginForm: FormGroup
-
-  constructor(private routes:Router) { 
+  
+  constructor() { 
 
 
     this.loginForm=new FormGroup({
-      'Email': new FormControl(null),
-      'Password': new FormControl(null)
+      'Email': new FormControl(null,[Validators.required, Validators.email]),
+      'Password': new FormControl(null, Validators.required)
     })
   }
 

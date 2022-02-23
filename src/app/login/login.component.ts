@@ -14,6 +14,6 @@ export class LoginComponent implements OnInit {
   }
 
   gotosingup(){
-    this.routes.navigate(['/singup'], {skipLocationChange:true});
+    this.routes.navigate(['/signup']);
   }
 }

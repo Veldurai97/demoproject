@@ -7,7 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { ErrorStateMatcher } from '@angular/material';
 
 
 const routes: Routes=[
@@ -25,7 +26,7 @@ const routes: Routes=[
         component:SigninComponent,
       },
       {
-        path:"singup",
+        path:"signup",
         component:SingupComponent,
       }
     ]

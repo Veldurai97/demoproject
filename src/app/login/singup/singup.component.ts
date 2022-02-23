@@ -8,18 +8,18 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class SingupComponent implements OnInit {
 
-  siginForm: FormGroup
+  signinForm: FormGroup
 
   constructor() { 
 
-    this.siginForm=new FormGroup({
+    this.signinForm=new FormGroup({
       'firstName': new FormControl(null),
       'lastName': new FormControl(null),
       'userName': new FormControl(null),
       'email': new FormControl(null),
       'password': new FormControl(null),
       'mobile': new FormControl(null),
-      'Role': new FormControl(null)
+      'Role': new FormControl('RoleId'),
     })
   }
 

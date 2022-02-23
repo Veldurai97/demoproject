@@ -1,3 +1,11 @@
 button{
     left: 185px;
+    bottom: 20px;
+    margin-top: 5px;
+}
+.form-group{
+    width: 300px;
+    top: 10px;
+    padding-left: 20px;
+    padding-right: 50px;
 }
