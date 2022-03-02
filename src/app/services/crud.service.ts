@@ -5,10 +5,16 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class CrudService {
    Headers=new HttpHeaders({
     "X-CSCAPI-KEY":"c2NKdXQwRTVhTlltMU5DREJJRlhFVjVETGFEMDZySVAyYlp6d0g5bg=="
   })
+   loginform = new HttpHeaders({
+         "token":localStorage.getItem("token")
+  }) 
+  
   constructor(private _httpClinet: HttpClient) { }
 
   createins(details:any):Observable<any>{
@@ -39,10 +45,13 @@ export class CrudService {
       return this._httpClinet.get(`https://api.countrystatecity.in/v1/countries/${ciso}/states`, {headers:this.Headers})
   }
   allcity(siso,ciso:any):Observable<any>{
-    // let Headers=new HttpHeaders({
-    //   "X-CSCAPI-KEY":"c2NKdXQwRTVhTlltMU5DREJJRlhFVjVETGFEMDZySVAyYlp6d0g5bg=="
-    // })
       return this._httpClinet.get(` https://api.countrystatecity.in/v1/countries/${ciso}/states/${siso}/cities`, {headers:this.Headers})
+  }
+  singup(details:any):Observable<any>{
+    return this._httpClinet.post("http://localhost:3000/api/signup", details, {headers:this.loginform})
+  }
+  singin(details:any):Observable<any>{
+    return this._httpClinet.post("http://localhost:3000/api/login",details,{headers:this.loginform})
   }
 }
 
