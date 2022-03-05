@@ -29,6 +29,6 @@ export class SigninComponent implements OnInit {
     this._create.singin(this.loginForm.value).subscribe(sing=>{
       console.log(sing)
     })
-    localStorage.setItem("token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBmZDgwMTI2MTQ4MjY0Zjg0NjNhYjVjIn0sImlhdCI6MTYyNzIzMDQwOSwiZXhwIjoxNjI3MjM0MDA5fQ.aj1J192lfRwbgqCVos3RSylVJpZITnfU7Ktlh82tCz0")
+    localStorage.setItem("token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjIxZjUyOTBjZDU5NzQxM2RjM2YzMDFjIn0sImlhdCI6MTY0NjI4NTIwMiwiZXhwIjoxNjQ2Mjg4ODAyfQ.uN2xulGu9kcp88jH0cEEJ7pcKDa8ljtTMElalPNuVJg")
   }
 }

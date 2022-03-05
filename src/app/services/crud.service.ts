@@ -14,7 +14,6 @@ export class CrudService {
    loginform = new HttpHeaders({
          "token":localStorage.getItem("token")
   }) 
-  
   constructor(private _httpClinet: HttpClient) { }
 
   createins(details:any):Observable<any>{
