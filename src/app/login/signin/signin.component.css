@@ -1,8 +1,22 @@
 h2{
     color: white;
     text-align: center;
+    height: 50px;
+    margin-top: 125px;
+}
+#demo{
+    color: white;
+    padding-left: 1235px;
+    padding-top: 50px;
+}
+.form-group{
+    left: 650px;
+   color: white;
 }
 button{
-    margin-left: 140px;
-    margin-bottom: 30px;
+    left: 860px;
 }
+.singup{
+    color: rgb(21, 21, 80);
+}
+

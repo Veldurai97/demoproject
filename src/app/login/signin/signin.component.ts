@@ -2,6 +2,7 @@ import { validateHorizontalPosition } from '@angular/cdk/overlay';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CrudService } from 'src/app/services/crud.service';
+import { Router } from '@angular/router';
 
 
 
@@ -14,7 +15,7 @@ export class SigninComponent implements OnInit {
 
   loginForm: FormGroup
   
-  constructor(private _create:CrudService) { 
+  constructor(private _create:CrudService,private routes:Router) { 
 
 
     this.loginForm=new FormGroup({
@@ -30,5 +31,8 @@ export class SigninComponent implements OnInit {
       console.log(sing)
     })
     localStorage.setItem("token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjIxZjUyOTBjZDU5NzQxM2RjM2YzMDFjIn0sImlhdCI6MTY0NjI4NTIwMiwiZXhwIjoxNjQ2Mjg4ODAyfQ.uN2xulGu9kcp88jH0cEEJ7pcKDa8ljtTMElalPNuVJg")
+  }
+  gotosingup(){
+    this.routes.navigate(['/signup']);
   }
 }
