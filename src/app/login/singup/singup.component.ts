@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CrudService } from 'src/app/services/crud.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-singup',
@@ -11,13 +12,13 @@ export class SingupComponent implements OnInit {
 
   signinForm: FormGroup
 
-  constructor(private _create:CrudService) { 
+  constructor(private _create:CrudService, private routes:Router) { 
 
     this.signinForm=new FormGroup({
       'firstName': new FormControl(null),
       'lastName': new FormControl(null),
       'userName': new FormControl(null),
-      'email': new FormControl(null),
+      'email': new FormControl(null,[Validators.required, Validators.email]),
       'password': new FormControl(null),
       'mobile': new FormControl(null),
       Role:new FormGroup({
@@ -32,7 +33,10 @@ export class SingupComponent implements OnInit {
   submit(){
     this._create.singup(this.signinForm.value).subscribe(loging=>{
       console.log(loging)
+      this.routes.navigate(['/signin'])
     })
   }
-
+  back(){
+    this.routes.navigate(['/signin']);
+  }
 }

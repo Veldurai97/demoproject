@@ -10,13 +10,20 @@ h2{
     padding-top: 50px;
 }
 .form-group{
-    left: 650px;
+    left: 610px;
    color: white;
 }
 button{
-    left: 860px;
+    left: 781px;
 }
 .singup{
-    color: rgb(21, 21, 80);
+    color: #f7bf08;
 }
+.email{
+    color: white;
+}
+.password{
+    color: white;
+}
+
 
