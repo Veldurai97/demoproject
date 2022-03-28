@@ -1,0 +1,26 @@
+#demo{
+    left: 788px;
+    bottom: -1px;
+    margin-top: 5px;
+}
+#demo1{
+    left: 669px;
+}
+.form-group{
+    width: 300px;
+    top: 10px;
+    padding-left: 20px;
+    padding-right: 50px;
+    display: flex;
+}
+h2{
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+}
+.form-group{
+    left: 650px;
+}
+.fn{
+    color: white;
+}
